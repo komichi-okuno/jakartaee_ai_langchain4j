@@ -4,7 +4,7 @@
 
 本サンプルは、以下の本で使用した、Jakarta EE アプリで LangChain4j / LangChain4j-CDI を活用するサンプルです。
 
-[Jakarta EE × AI 実践入門：LangChain4jで実現するエンタープライズJava開発]()
+[Jakarta EE × AI 実践入門：LangChain4jで実現するエンタープライズJava開発](https://amzn.asia/d/0g7p6FCw)
 
 This repository contains sample applications featured in the book:
 
