@@ -1,0 +1,34 @@
+# --- Maven ビルド生成物 ---
+target/
+pom.xml.tag
+pom.xml.releaseBackup
+pom.xml.versionsBackup
+pom.xml.next
+release.properties
+dependency-reduced-pom.xml
+build.log
+
+# --- IDE (IntelliJ / Eclipse / VSCode) ---
+.idea/
+*.iws
+*.iml
+*.ipr
+out/
+.settings/
+.classpath
+.project
+.factorypath
+.metadata/
+.vscode/
+
+# --- OS / システム ---
+.DS_Store
+Thumbs.db
+
+# --- 設定・機密情報 (重要!) ---
+# APIキーなどを環境変数ファイル（.env）に書いている場合は除外
+.env
+*.log
+
+# WildFly / Quarkus / Payara などの一時ファイル
+/build/

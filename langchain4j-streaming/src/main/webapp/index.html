@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>Technical AI sample</title>
+	</head>
+<body>
+    <input type="text" id="msg" placeholder="質問を入力">
+    <button onclick="send()">送信</button>
+    
+    <pre id="output" style="white-space: pre-wrap;"></pre>
+
+    <script>
+        let es = null;
+        function send() {
+            const out = document.getElementById('output');
+            const msg = document.getElementById('msg').value;
+            out.innerText = ""; // 画面クリア
+
+            if (es) es.close();
+
+            // URLは環境に合わせて調整してください
+            es = new EventSource(`./api/ai/chat?msg=${encodeURIComponent(msg)}`);
+
+            es.onmessage = (e) => {
+                out.innerText += e.data; // 届いた文字を追記
+            };
+
+            es.onerror = () => es.close(); // 終わったら切断
+        }
+    </script>
+</body>
+</html>
